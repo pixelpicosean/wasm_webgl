@@ -1,0 +1,12 @@
+{
+  "name": "wasm_webgl",
+  "version": "0.1.0",
+  "description": "WebGL app using C/C++ and Wajic",
+  "scripts": {
+    "build": "npm run compile && npm run bind_js",
+    "compile": "node build/wajicup.js src/webgl.cc public/app.wasm",
+    "bind_js": "node build/wajicup.js public/app.wasm public/app.wasm public/app.js"
+  },
+  "author": "Sean Bohan",
+  "license": "MIT"
+}
